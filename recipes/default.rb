@@ -15,10 +15,11 @@ package value_for_platform_family(
   'default' => 'tzdata'
 )
 
-case node.platform_family
-when 'debian', 'fedora', 'pld', 'rhel'
+case node['platform_family']
+when 'debian', 'fedora', 'pld'
   include_recipe "timezone-ii::#{node.platform_family}"
-
+when 'rhel', 'centos'
+  include_recipe "timezone-ii::rhel"
 else
   if node.os == "linux"
     # Load the generic Linux recipe if there's no better known way to change the
