@@ -3,7 +3,7 @@ maintainer       "Lawrence Leonard Gilbert"
 maintainer_email "larry@L2G.to"
 license          "Apache 2.0"
 description      "Configure the system timezone on Linux systems"
-version          "0.2.1"
+version          "0.2.2"
 
 replaces         "timezone"
 
